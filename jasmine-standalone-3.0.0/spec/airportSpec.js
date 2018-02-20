@@ -29,6 +29,15 @@ describe("Airport", function() {
       airport.land(plane);
       expect(airport.takeOff(plane)).toEqual(plane);
     })
+
+    it('returns an error when plane takes off from an empty airport', function () {
+      var plane = 'a plane'
+      expect(airport.takeOff(plane)).toThrowError('No planes in airport');
+    })
   })
+
+
+
+
 
 })
