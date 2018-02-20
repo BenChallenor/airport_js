@@ -7,14 +7,16 @@ Airport.prototype.land = function(plane) {
 };
 
 Airport.prototype.takeOff = function(plane) {
-  if (airport.planes.length === 0) {
+  if (this.planes.length === 0) {
     throw "No planes in airport"
-  };
-
-
-  for (var num = this.planes.length; num--;) {
-    if (this.planes[num] === plane) {
-      return this.planes.splice(num, 1)[0]
+  }
+  else {
+    for (var num = this.planes.length; num--;) {
+      if (this.planes[num] === plane) {
+        return this.planes.splice(num, 1)[0]
+      };
     };
   };
+
+
 };

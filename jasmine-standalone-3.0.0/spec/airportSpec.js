@@ -32,7 +32,7 @@ describe("Airport", function() {
 
     it('returns an error when plane takes off from an empty airport', function () {
       var plane = 'a plane'
-      expect(airport.takeOff(plane)).toThrowError('No planes in airport');
+      expect(function() {airport.takeOff(plane)}).toThrow('No planes in airport');
     })
   })
 
